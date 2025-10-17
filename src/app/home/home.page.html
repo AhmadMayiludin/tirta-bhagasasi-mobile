@@ -1,0 +1,65 @@
+<ion-header translucent>
+  <div class="device-topbar">
+    <div class="status-left">10:00 AM</div>
+    <div class="title">Beranda</div>
+    <ion-icon name="lock-closed-outline" class="lock-icon" aria-hidden="true"></ion-icon>
+  </div>
+</ion-header>
+
+<ion-content fullscreen class="page-content">
+  <div class="card-screen">
+    <div class="greeting">
+      <h1>Selamat Datang,</h1>
+      <h2>{{ user.nama }}</h2>
+    </div>
+
+    <div class="grid">
+      <button class="menu-card">
+        <div class="icon-wrap">
+          <ion-icon name="time-outline"></ion-icon>
+        </div>
+        <div class="label">Absensi</div>
+      </button>
+
+      <button class="menu-card">
+        <div class="icon-wrap">
+          <ion-icon name="bar-chart-outline"></ion-icon>
+        </div>
+        <div class="label">Laporan Harian</div>
+      </button>
+
+      <button class="menu-card">
+        <div class="icon-wrap">
+          <ion-icon name="calendar-outline"></ion-icon>
+        </div>
+        <div class="label">Jadwal Tugas</div>
+      </button>
+
+      <button class="menu-card">
+        <div class="icon-wrap">
+          <ion-icon name="notifications-outline"></ion-icon>
+        </div>
+        <div class="label">Notifikasi</div>
+      </button>
+    </div>
+
+    <!-- Logout Button -->
+    <button class="logout-btn" (click)="logout()">
+      <ion-icon name="log-out-outline"></ion-icon>
+      <span>Logout</span>
+    </button>
+
+    <!-- wave footer -->
+    <div class="wave-wrap" aria-hidden="true">
+      <svg viewBox="0 0 1440 200" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="waveGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#0098d4;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#1a3a52;stop-opacity:1" />
+          </linearGradient>
+        </defs>
+        <path d="M0,120 C180,200 360,40 720,80 C1080,120 1260,200 1440,140 L1440 200 L0 200 Z"></path>
+      </svg>
+    </div>
+  </div>
+</ion-content>

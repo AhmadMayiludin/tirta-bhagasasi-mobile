@@ -1,0 +1,293 @@
+.greeting h1 {
+  margin: 0;
+  font-size: 38px;
+  color: #1a3a52;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+}
+
+.greeting h2 {
+  margin: 8px 0 0 0;
+  font-size: 32px;
+  color: #0098d4;
+  font-weight: 900;
+  letter-spacing: -0.3px;
+}:host {
+  --ion-safe-area-top: 0px;
+}
+
+/* Overall page background */
+.page-content {
+  --background: #f0f2f5;
+}
+
+/* Device topbar styling - sesuai design */
+.device-topbar {
+  background: #1a3a52;
+  color: #ffffff;
+  height: 88px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  border-bottom-left-radius: 28px;
+  border-bottom-right-radius: 28px;
+  box-shadow: 0 8px 24px rgba(26, 58, 82, 0.2);
+  position: relative;
+  font-size: 14px;
+}
+
+/* Status time - top left */
+.status-left {
+  position: absolute;
+  left: 20px;
+  top: 14px;
+  font-size: 13px;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+/* Center title */
+.title {
+  font-weight: 700;
+  font-size: 24px;
+  margin: 0 auto;
+  letter-spacing: 0.3px;
+}
+
+/* Lock icon - top right */
+.lock-icon {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 20px;
+  color: #ffffff;
+  opacity: 0.9;
+}
+
+/* Main white card container */
+.card-screen {
+  background: #ffffff;
+  margin: 26px;
+  margin-bottom: 0;
+  border-radius: 24px;
+  padding: 32px 26px 0 26px;
+  min-height: calc(100vh - 140px);
+  box-shadow: 0 12px 32px rgba(13, 43, 64, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Greeting section */
+.greeting {
+  margin-bottom: 32px;
+  padding-top: 8px;
+}
+
+.greeting h1 {
+  margin: 0;
+  font-size: 38px;
+  color: #0d2b40;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+}
+
+.greeting h2 {
+  margin: 8px 0 0 0;
+  font-size: 32px;
+  color: #17d4d4;
+  font-weight: 900;
+  letter-spacing: -0.3px;
+}
+
+/* Grid layout - 2x2 */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 16px;
+  margin-bottom: 40px;
+}
+
+/* Menu card button */
+.menu-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: #ffffff;
+  border: 1px solid #e8ecf0;
+  border-radius: 18px;
+  padding: 24px 16px;
+  min-height: 130px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(13, 43, 64, 0.06);
+}
+
+.menu-card:hover {
+  border-color: #d0d8e0;
+  box-shadow: 0 4px 12px rgba(13, 43, 64, 0.1);
+  transform: translateY(-2px);
+}
+
+.menu-card:active {
+  transform: translateY(0px);
+  box-shadow: 0 1px 4px rgba(13, 43, 64, 0.05);
+}
+
+/* Icon wrapper circle */
+.icon-wrap {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(13, 43, 64, 0.04) 0%, rgba(13, 43, 64, 0.02) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 -3px 8px rgba(13, 43, 64, 0.03);
+}
+
+.icon-wrap ion-icon {
+  font-size: 32px;
+  color: #0d2b40;
+  font-weight: 600;
+}
+
+/* Label text */
+.label {
+  font-size: 16px;
+  color: #0d2b40;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.3;
+}
+
+/* Logout Button */
+.logout-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #0098d4 0%, #00b8e6 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 20px;
+  margin: 20px 0 20px 0;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 152, 212, 0.3);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.logout-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 152, 212, 0.4);
+}
+
+.logout-btn:active {
+  transform: translateY(0px);
+  box-shadow: 0 2px 8px rgba(0, 152, 212, 0.3);
+}
+
+.logout-btn ion-icon {
+  font-size: 20px;
+}
+
+.logout-btn span {
+  letter-spacing: 0.3px;
+}
+
+/* Wave footer */
+.wave-wrap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 80px;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.wave-wrap svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  bottom: -2px;
+}
+
+.wave-wrap svg path {
+  fill: url(#waveGradient);
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .device-topbar {
+    height: 80px;
+    padding: 0 16px;
+  }
+
+  .status-left {
+    left: 16px;
+    font-size: 12px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .lock-icon {
+    right: 16px;
+    font-size: 18px;
+  }
+
+  .card-screen {
+    margin: 16px;
+    padding: 24px 18px 0 18px;
+  }
+
+  .greeting {
+    margin-bottom: 24px;
+  }
+
+  .greeting h1 {
+    font-size: 32px;
+  }
+
+  .greeting h2 {
+    font-size: 28px;
+  }
+
+  .grid {
+    gap: 14px;
+    margin-bottom: 32px;
+  }
+
+  .menu-card {
+    min-height: 120px;
+    padding: 20px 14px;
+    gap: 10px;
+  }
+
+  .icon-wrap {
+    width: 56px;
+    height: 56px;
+  }
+
+  .icon-wrap ion-icon {
+    font-size: 28px;
+  }
+
+  .label {
+    font-size: 15px;
+  }
+}

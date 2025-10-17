@@ -1,0 +1,7 @@
+{
+  "name": "app_perumda",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

@@ -1,0 +1,78 @@
+/* FILE: src/app/auth/login/login.page.scss (REVISI FINAL DENGAN BACKGROUND BARU) */
+
+.login-container {
+  // 1. Latar Belakang Gradien Utama
+  background: linear-gradient(160deg, #1B264F 0%, #0077B6 100%);
+  position: relative; // Diperlukan agar gelombang bisa diposisikan
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  overflow: hidden; // Sembunyikan bagian gelombang yang keluar layar
+}
+
+// 2. Trik untuk Membuat Gelombang Abstrak di Bawah
+.login-container::after {
+  content: '';
+  position: absolute;
+  bottom: -50px; // Posisikan sedikit di bawah layar
+  left: -50%;
+  width: 200%;
+  height: 250px;
+  background: #00AEEF; // Warna gelombang (biru cyan)
+  opacity: 0.2; // Buat jadi semi-transparan
+  border-radius: 50%; // Trik untuk membuat bentuk melengkung
+  z-index: 1;
+}
+
+.login-card {
+  background: rgba(255, 255, 255, 0.95); // Sedikit transparan agar lebih menyatu
+  backdrop-filter: blur(5px); // Efek "kaca buram" (opsional, tapi keren)
+  width: 85%;
+  max-width: 380px;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+  z-index: 2; // Pastikan kartu selalu di atas gelombang
+}
+
+.logo {
+  width: 90px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  margin-bottom: 25px;
+  color: #1B264F; // Warna navy
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.input-item {
+  margin-bottom: 12px;
+  border-radius: 10px;
+  --background: #f5f7fa;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.06);
+}
+
+.login-btn {
+  margin-top: 18px;
+  --background: var(--ion-color-primary); // Gunakan warna navy utama
+  --background-activated: #182246;
+  --box-shadow: 0 4px 15px rgba(27, 38, 79, 0.4);
+  border-radius: 10px;
+  font-weight: bold;
+  height: 48px;
+}
+
+.forgot-password, .register-text {
+  font-size: 14px;
+}
+
+.register-link, .forgot-password {
+  color: #1B264F;
+  font-weight: 600;
+  cursor: pointer;
+}
