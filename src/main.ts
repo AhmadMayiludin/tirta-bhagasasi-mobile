@@ -38,14 +38,11 @@ if (environment.production) {
   enableProdMode();
 }
 
-bootstrapApplication(AppComponent, {
-  providers: [
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    provideIonicAngular({}),
-    provideRouter(routes),
-    importProvidersFrom(HttpClientModule),
-  ],
-});
+import { appConfig } from './app/app.config';
+
+bootstrapApplication(AppComponent, appConfig)
+  .catch(err => console.error(err));
+
 
 // --- 2. TAMBAHKAN NAMA IKON DI FUNGSI addIcons DI SINI ---
 addIcons({

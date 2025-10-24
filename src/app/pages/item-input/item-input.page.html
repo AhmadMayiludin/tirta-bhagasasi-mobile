@@ -1,13 +1,86 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>item-input</ion-title>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Input Barang Baru</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">item-input</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+  <form [formGroup]="itemForm" (ngSubmit)="simpanItem()">
+
+    <!-- 🔹 Upload Foto -->
+    <div class="photo-upload-container ion-text-center ion-margin-bottom">
+      <ion-thumbnail class="item-photo-preview" *ngIf="photoPreview">
+        <img [src]="photoPreview" alt="Preview Foto Barang" />
+      </ion-thumbnail>
+
+      <!-- tombol upload -->
+      <ion-button fill="outline" (click)="ambilFoto()">
+        <ion-icon slot="start" name="camera-outline"></ion-icon>
+        Upload Foto
+      </ion-button>
+
+      <!-- input file tersembunyi (khusus browser) -->
+      <input
+        #fileInput
+        type="file"
+        hidden
+        accept="image/*"
+        (change)="onFileSelected($event)"
+      />
+    </div>
+
+    <!-- 🔹 Input Data Barang -->
+    <ion-list>
+      <ion-item>
+        <ion-input
+          label="Nama Item"
+          label-placement="floating"
+          formControlName="nama_item"
+          required
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input
+          label="Kode Scan (Barcode/QR)"
+          label-placement="floating"
+          formControlName="scan_code"
+          required
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-select
+          label="Kondisi Barang"
+          label-placement="floating"
+          formControlName="item_condition"
+        >
+          <ion-select-option value="Baru">Baru</ion-select-option>
+          <ion-select-option value="Layak Pakai">Layak Pakai</ion-select-option>
+          <ion-select-option value="Tidak Layak Pakai">Tidak Layak Pakai</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-input
+          label="Kode Permendagri (Opsional)"
+          label-placement="floating"
+          formControlName="permendagri_code"
+        ></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <!-- 🔹 Tombol Simpan -->
+    <ion-button
+      expand="block"
+      type="submit"
+      class="ion-margin-top"
+      [disabled]="!itemForm.valid"
+    >
+      Simpan Barang
+    </ion-button>
+  </form>
 </ion-content>
